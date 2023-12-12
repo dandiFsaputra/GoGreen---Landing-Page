@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/tailwind.css" />
+    <title>Hijauin | Hijaukan Langkahmu</title>
+  </head>
+  <body>
+    <section id="hero">
+      <div class="bg-tentang h-full">
+        <img src="../public/assets/img/bg-space.svg" alt="" />
+      </div>
+
+      <div class="container mx-auto">
+        <div
+          class="flex justify-between items-center p-4 rounded-full bg-Putih-utama mt-10 drop-shadow-md"
+        >
+          <nav class="">
+            <a href="index.html"
+              ><img src="../public/assets/img/logo-brand.svg" alt="logo-brand"
+            /></a>
+          </nav>
+          <div>
+            <ul class="flex gap-10">
+              <li class="font-MaisonNeueDemi tracking-wide text-xl">
+                <a href="index.html">Beranda</a>
+              </li>
+              <li class="font-MaisonNeueDemi tracking-wide text-xl">
+                <a href="tentang.html">Tentang Kami</a>
+              </li>
+              <li class="font-MaisonNeueDemi tracking-wide text-xl">
+                <a href="campaign.html">Campaign</a>
+              </li>
+            </ul>
+          </div>
+          <a href="kalkjejak.html"
+            ><button
+              type="button"
+              class="bg-hijau-utama flex items-center rounded-full text-Putih-utama font-MaisonNeueDemi tracking-wide text-xl py-4 px-6 gap-2"
+            >
+              CarbonSpace
+              <span
+                ><img src="../public/assets/icon/arrow-right.svg" alt=""
+              /></span></button
+          ></a>
+        </div>
+        <div class="content-space my-16">
+          <div class="heading-campaign text-center mb-16">
+            <h1 class="font-MaisonNeueBold text-4xl text-Putih-utama">
+              Ayo hitung jejak karbonmu!
+            </h1>
+          </div>
+          <div
+            class="divider w-24 h-5 mx-auto mb-16 bg-Abu-garis rounded-full"
+          ></div>
+          <div class="heading-total text-center mb-11">
+            <h1 class="font-MaisonNeueBold text-2xl text-Putih-utama">
+              Total jejak karbon kamu
+            </h1>
+          </div>
+          <div class="heading-gram mb-6 text-center">
+            <h1
+              id="result"
+              class="font-MaisonNeueBold text-6xl text-Hitam-utama"
+            >
+              ...
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="input" class="pt-40 pb-28">
+      <div class="container mx-auto">
+        <div class="input-karbon flex justify-center gap-20">
+          <div class="input1">
+            <div class="content-judul gap-2 flex items-center">
+              <div class="icon">
+                <img src="../public/assets/img/motor.svg" alt="" />
+              </div>
+              <div class="judul">
+                <h1 class="font-MaisonNeueBold text-3xl text-Hitam-utama">
+                  Motor
+                </h1>
+              </div>
+            </div>
+            <div class="parag-input w-56 mt-6">
+              <h1 class="font-MaisonNeueMedium text-base text-Hitam-utama">
+                Rata-rata jarak konsumsi perhari pemakaian
+              </h1>
+            </div>
+            <div class="input mt-8">
+              <input type="number" placeholder="ketik disini (km)" id="motor" />
+            </div>
+          </div>
+          <div class="input2">
+            <div class="content-judul gap-2 flex items-center">
+              <div class="icon">
+                <img src="../public/assets/img/laptop.svg" alt="" />
+              </div>
+              <div class="judul">
+                <h1 class="font-MaisonNeueBold text-3xl text-Hitam-utama">
+                  Laptop
+                </h1>
+              </div>
+            </div>
+            <div class="parag-input w-56 mt-6">
+              <h1 class="font-MaisonNeueMedium text-base text-Hitam-utama">
+                Rata-rata konsumsi perhari pemakaian
+              </h1>
+            </div>
+            <div class="input mt-8">
+              <input
+                type="number"
+                placeholder="ketik disini (jam)"
+                id="laptop"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="tombol-tindakan justify-center flex mt-10">
+          <button
+            onclick="calculateCarbonFootprint()"
+            type="button"
+            class="bg-Hitam-utama flex items-center rounded-full text-Putih-utama font-MaisonNeueDemi tracking-wide text-xl py-4 px-6 gap-2"
+          >
+            Hitung
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="footer-campaign">
+      <footer class="bg-Footer p-20">
+        <div class="container mx-auto">
+          <div class="content-footer">
+            <div class="content-atas flex items-start justify-between">
+              <div class="logo-brand-footer">
+                <a href="index.html"
+                  ><img src="../public/assets/img/Logo-brand-light.svg" alt=""
+                /></a>
+              </div>
+              <div class="menu">
+                <h1 class="font-MaisonNeueBold text-3xl text-Putih-utama">
+                  Menu
+                </h1>
+                <ul class="font-MaisonNeueMedium text-base text-Putih-utama">
+                  <li class="mb-6 mt-9"><a href="index.html">Beranda</a></li>
+                  <li class="mb-6"><a href="tentang.html">Tentang</a></li>
+                  <li class="mb-6"><a href="campaign.html">Campaign</a></li>
+                </ul>
+              </div>
+              <div class="ruang">
+                <h1 class="font-MaisonNeueBold text-3xl text-Putih-utama">
+                  Ruang
+                </h1>
+                <ul class="font-MaisonNeueMedium text-base text-Putih-utama">
+                  <li class="mt-9"><a href="kalkjejak.html">CarbonSpace</a></li>
+                </ul>
+              </div>
+              <div class="sosial">
+                <h1 class="font-MaisonNeueBold text-3xl text-Putih-utama">
+                  Terhubung dengan kami
+                </h1>
+                <div class="content-icon-sosial flex mt-9">
+                  <div class="order-4 mr-5">
+                    <img src="../public/assets/icon/fb.svg" alt="" />
+                  </div>
+                  <div class="order-1 mr-5">
+                    <img src="../public/assets/icon/ig.svg" alt="" />
+                  </div>
+                  <div>
+                    <img
+                      class="order-3 mr-5"
+                      src="../public/assets/icon/twitter.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mr-5">
+                    <img src="../public/assets/icon/yt.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="my-9">
+              <hr class="bg-Abu-garis" />
+            </div>
+            <div
+              class="bawah flex justify-between font-MaisonNeueMedium text-Putih-utama text-sm"
+            >
+              <p>Copyright © 2023</p>
+              <p>hijauin</p>
+              <p>#HijaukanLangkahmu</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

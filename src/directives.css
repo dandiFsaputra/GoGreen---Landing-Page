@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "MaisonNeue-Bold";
+    src: url("../public/font/MaisonNeue-Bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "MaisonNeue-Demi";
+    src: url("../public/font/MaisonNeue-Demi.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "MaisonNeue-Medium";
+    src: url("../public/font/MaisonNeue-Medium.otf") format("opentype");
+  }
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-tentang {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+.paragraf-hero p {
+  line-height: 60px;
+}
+
+.jawaban {
+  line-height: 32px;
+}
+
+/* .percentage {
+    border: 1px solid red;
+} */
+
+.content-percentage {
+  top: -70px;
+}
+
+#pondasi,
+.tindakan-rounded {
+  border-top-left-radius: 72px;
+  border-top-right-radius: 72px;
+  top: -70px;
+}
+
+#berita {
+  margin-top: 900px;
+}
+
+#berita2 {
+  margin-top: 200px;
+}
+
+.cover img {
+  border-radius: 64px;
+  -webkit-border-radius: 64px;
+  -moz-border-radius: 64px;
+  -ms-border-radius: 64px;
+  -o-border-radius: 64px;
+  background-size: cover;
+}
+
+.gradasi-hijau {
+  background: rgb(0, 170, 19);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 170, 19, 1) 0%,
+    rgba(2, 116, 15, 1) 100%
+  );
+}
+
+#tujuan {
+  margin-top: 290px;
+  background-color: #29abe2;
+}
+
+.paragraf-tujuan p {
+  line-height: 44px;
+}
+
+.elemen-lingkaran {
+  z-index: -1;
+}
+
+#pondasi {
+  margin-top: -30px;
+}
+
+.content-card {
+  bottom: -300px;
+}
+
+.title h1 {
+  line-height: 44px;
+}
+
+#aksi {
+  margin-top: 200px;
+}
+
+#footer2,
+#footer {
+  margin-top: -30px;
+}
+
+#tindakan1 {
+  margin-top: 100px;
+}
+
+.tindakan-rounded {
+  margin-top: 20px;
+}
+
+.input input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #b8b8b8;
+}
+
+.input input::placeholder {
+  font-size: 20px;
+  font-weight: 600;
+  color: #b8b8b8;
+}
+
+/* IMG HOVER GRAYSCALE */
+.grayscale-img {
+  filter: grayscale(100%);
+  transition: filter 0.2s ease-in-out;
+  -webkit-transition: filter 0.2s ease-in-out;
+  -moz-transition: filter 0.2s ease-in-out;
+  -ms-transition: filter 0.2s ease-in-out;
+  -o-transition: filter 0.2s ease-in-out;
+}
+
+.grayscale-img:hover {
+  filter: grayscale(0%);
+}
+
+.gambar:hover img {
+  transform: scale(0.9);
+  transform: rotate(-8deg);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+.gambar img {
+  transition: transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(0.9);
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.artikel-one:hover,
+.artikel-two:hover,
+.artikel1:hover,
+.artikel2:hover,
+.artikel3:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.artikel-one,
+.artikel-two,
+.artikel1,
+.artikel2,
+.artikel3 {
+  transition: transform 0.2s ease-in-out;
+}
+
+#loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loading-animation {
+  /* Tambahkan animasi Lottie di sini */
+  background-image: url("../public/assets/icon/loadingg.json");
+}
